@@ -86,88 +86,602 @@ export function CoffeeStory() {
               invalidateOnRefresh: true,
             },
           });
-
           if (id === "product") {
             timeline
-              .fromTo(".scene-product-copy", { x: 0, opacity: 1 }, { x: -90, opacity: 0, ease: "none" }, 0.12)
-              .fromTo(".scene-product-pouch", { x: 0, y: 0, rotate: 0, scale: 1 }, { x: -110, y: -52, rotate: 4, scale: 1.54, ease: "none" }, 0.08)
-              .fromTo(".scene-product-word", { y: 0, opacity: 0 }, { y: -200, x:-730, opacity: 0.5, ease: "none" }, 0.95)
-              .fromTo(".scene-product-bg", { scale: 1, opacity: 1 }, { scale: 1.3, opacity: 0.1, ease: "none" }, 0.45)
-              .fromTo(".scene-product-next", { x: 110, opacity: 0 }, { x: 0, opacity: 1, ease: "none" }, 0.62);
+              .fromTo(
+                ".scene-product-copy",
+                { x: 0, opacity: 1 },
+                { x: "-10vh", opacity: 0, ease: "none" },
+                0.12
+              )
+              .fromTo(
+                ".scene-product-pouch",
+                { x: 0, y: 0, rotate: 0, scale: 1 },
+                {
+                  x: "-5vh",
+                  y: "3vh",
+                  rotate: 4,
+                  opacity: 1,
+                  scale: 1.3,
+                  ease: "none",
+                },
+                0.08
+              )
+              .fromTo(
+                ".scene-product-word",
+                { y: 0, opacity: 0 },
+                {
+                  y: "-10vh",
+                  x: "-55vh",
+                  opacity: 0.8,
+                  ease: "none",
+                },
+                0.35
+              )
+              .fromTo(
+                ".scene-product-bg",
+                { scale: 1, opacity: 1 },
+                { scale: 1.3, opacity: 0.5, ease: "none" },
+                0.45
+              )
+              .fromTo(
+                ".scene-product-next",
+                { x: "110vh", opacity: 0 },
+                { x: "-100vh", opacity: 1, ease: "none" },
+                0.62
+              );
           }
 
           if (id === "brand") {
             timeline
-              .fromTo(".scene-brand-word", { y: 120, rotate: -7, opacity: 0 }, { y: 0, rotate: 0, opacity: 1, stagger: 0.08, ease: "power2.out" }, 0)
-              .fromTo(".scene-brand-pouch", { x: 240, rotate: 8, scale: 0.7, opacity: 0 }, { x: 0, rotate: -4, scale: 0.9, opacity: 0.9, ease: "none" }, 0.18)
-              .to(".scene-brand-word", { x: -110, scale: 1.08, stagger: 0.04, ease: "none" }, 0.55)
-              .to(".scene-brand-pouch", { x: -210, rotate: -12, scale: 1.42, opacity: 0.6, ease: "none" }, 0.62)
-              .fromTo(".scene-brand-next", { y: 100, opacity: 0 }, { y: 0, opacity: 1, ease: "none" }, 0.72);
+              .fromTo(
+                ".scene-brand-word",
+                { y: "120vh", rotate: -7, opacity: 0 },
+                {
+                  y: 0,
+                  rotate: 0,
+                  opacity: 1,
+                  stagger: 0.08,
+                  ease: "power2.out",
+                },
+                0
+              )
+              .fromTo(
+                ".scene-brand-pouch",
+                {
+                  x: "240vh",
+                  rotate: 8,
+                  scale: 0.7,
+                  opacity: 0,
+                },
+                {
+                  x: 0,
+                  rotate: -4,
+                  scale: 0.9,
+                  opacity: 0.9,
+                  ease: "none",
+                },
+                0.18
+              )
+              .to(
+                ".scene-brand-word",
+                {
+                  x: "-10vh",
+                  scale: 1.08,
+                  stagger: 0.04,
+                  ease: "none",
+                },
+                0.55
+              )
+              .to(
+                ".scene-brand-pouch",
+                {
+                  x: "-110vh",
+                  rotate: -12,
+                  scale: 1.42,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.62
+              )
+              .fromTo(
+                ".scene-brand-next",
+                { y: "100vh", opacity: 0 },
+                { y: 0, x:"70vh", opacity: 1, ease: "none" },
+                0.32
+              );
           }
 
           if (id === "coffee") {
             timeline
-              .fromTo(".scene-coffee-pouch", { x: 780, rotate: 8, scale: 0.72 }, { x: 100, rotate: -3, scale: 1, ease: "none" }, 0)
-              .fromTo(".scene-coffee-heading", { x: 780, rotate: 0, scale: 1, opacity:0 }, { x: 0, rotate: 0, scale: 1, opacity: 1, ease: "none" }, 0)
-              .fromTo(".scene-coffee-meta", { x: 100, opacity: 0 }, { x: 0, opacity: 1, stagger: 0.07, ease: "power2.out" }, 0.22)
-              .to(".scene-coffee-pouch", { x: 70, y: 12, rotate: 5,  scale: 0.88, ease: "none" }, 0.62)
-              .to(".scene-coffee-heading", { y: 300, rotate: 0, scale: 1, opacity: 0, ease: "none" }, 1)
-              .fromTo(".scene-coffee-next", { x: 180, opacity: 0 }, { x: 0, opacity: 1, ease: "none" }, 0.7);
+              .fromTo(
+                ".scene-coffee-pouch",
+                {
+                  x: "80vh",
+                  rotate: 8,
+                  scale: 0.72,
+                  opacity:0.1
+                },
+                {
+                  x: "5vh",
+                  rotate: -10,
+                  scale: 1.3,
+                  opacity:1,
+                  ease: "none",
+                },
+                0
+              )
+              .fromTo(
+                ".scene-coffee-heading",
+                {
+                  x: "50vh",
+                  rotate: 0,
+                  scale: 1,
+                  opacity: 0,
+                },
+                {
+                  x: 0,
+                  rotate: 0,
+                  scale: 1,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0
+              )
+              .fromTo(
+                ".scene-coffee-meta",
+                { x: "100vh", opacity: 0 },
+                {
+                  x: 0,
+                  opacity: 1,
+                  stagger: 0.07,
+                  ease: "none",
+                },
+                0.55
+              )
+              .to(
+                ".scene-coffee-meta",
+                {
+                  x: "-90vh",
+                  stagger: 0.07,
+                  opacity: 0,
+                },
+                1.54
+              )
+              .to(
+                ".scene-coffee-pouch",
+                {
+                  x: "70vh",
+                  y: "12vh",
+                  rotate: 10,
+                  opacity:0,
+                  scale: 1.33,
+                  ease: "none",
+                },
+                1.62
+              )
+              .to(
+                ".scene-coffee-heading",
+                {
+                  y: "30vh",
+                  rotate: 0,
+                  scale: 1,
+                  opacity: 0,
+                  ease: "none",
+                },
+                1.62
+              )
+              .fromTo(
+                ".scene-coffee-next",
+                { x: "180vh", opacity: 0 },
+                { x: 0, opacity: 1, ease: "none" },
+                0.5
+              );
           }
 
           if (id === "flavor") {
             timeline
-              .fromTo(".scene-flavor-word", { y: 100, opacity: 0, rotate: 4 }, { y: 0, opacity: 1, rotate: 0, stagger: 0.07, ease: "power2.out" }, 0)
-              .fromTo(".scene-flavor-pouch", { x: -160, rotate: -8, scale: 0.72, opacity: 0.2 }, { y: -100, rotate: 2, scale: 1.9, opacity: 1, ease: "none" }, 0.2)
-              .to(".scene-flavor-word", { x: (i) => (i % 2 === 0 ? -100 : 100), opacity: 0.18, stagger: 0.04, ease: "none" }, 0.62)
-              .to(".scene-flavor-pouch", { y: -100, x: -120, rotate: 11, scale: 1.9, opacity: 1, ease: "none" }, 0.68)
-              .fromTo(".scene-flavor-next", { y: 100, opacity: 0 }, { y: 0, opacity: 1, ease: "none" }, 0.72);
+              .fromTo(
+                ".scene-flavor-word",
+                {
+                  y: "30vh",
+                  opacity: 0,
+                  rotate: 4,
+                },
+                {
+                  y: 0,
+                  opacity: 1,
+                  rotate: 0,
+                  stagger: 0.07,
+                  ease: "power2.out",
+                },
+                0
+              )
+              .fromTo(
+                ".scene-flavor-pouch",
+                {
+                  x: "-16vh",
+                  rotate: -8,
+                  scale: 1,
+                  opacity: 1,
+                },
+                {
+                  y: "-10vh",
+                  rotate: 2,
+                  scale: 1.9,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.2
+              )
+              .to(
+                ".scene-flavor-word",
+                {
+                  x: (i) => (i % 2 === 0 ? "-100vh" : "100vh"),
+                  opacity: 0.18,
+                  stagger: 0.04,
+                  ease: "none",
+                },
+                0.62
+              )
+              .to(
+                ".scene-flavor-pouch",
+                {
+                  x:"-5vh",
+                  rotate: 11,
+                  scale: 1.7,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.68
+              )
+              .fromTo(
+                ".scene-flavor-next",
+                { y: "100vh", opacity: 0 },
+                { y: 0, opacity: 1, ease: "none" },
+                0.72
+              );
           }
 
           if (id === "origin") {
             timeline
-              .fromTo(".scene-origin-landscape", { x: 110, scale: 1.1 }, { x: -100, scale: 1, ease: "none" }, 0)
-              .fromTo(".scene-origin-title", { scale: 1.35, x: 120, opacity: 0.2 }, { scale: 1, x: 0, opacity: 1, ease: "none" }, 0.1)
-              .fromTo(".scene-origin-pouch", { x: -210, y: 80, rotate: -10, opacity: 0 }, { x: -400, y: -200, rotate: 3,scale: 1.7, opacity: 1, ease: "none" }, 0.28)
-              .fromTo(".scene-origin-meta", { y: 80, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.05, ease: "power2.out" }, 0.45)
-              .to(".scene-origin-meta", { x: -700, opacity: 1, stagger: 0.05, ease: "power2.out" }, 1.36)
-              .to(".scene-origin-title", { scale: 1, x: 0,  y: 400, opacity: 1, ease: "none" }, 0.76)
-              .to(".scene-origin-pouch", { x: 70, y: -170, rotate: 8, scale: 1.82, ease: "none" }, 1);
+              .fromTo(
+                ".scene-origin-landscape",
+                {
+                  x: "0vh",
+                  scale: 1,
+                },
+                {
+                  x: "0vh",
+                  scale: 2,
+                  ease: "none",
+                },
+                0
+              )
+              .fromTo(
+                ".scene-origin-title",
+                {
+                  scale: 1.35,
+                  x: "120vh",
+                  opacity: 0.1,
+                },
+                {
+                  scale: 1,
+                  x: 0,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0
+              )
+              .fromTo(
+                ".scene-origin-pouch",
+                {
+                  x: "-21vh",
+                  y: "40vh",
+                  rotate: -10,
+                  opacity: 0,
+                },
+                {
+                  x: "-25vh",
+                  y: "-20vh",
+                  rotate: 3,
+                  scale: 1.7,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.28
+              )
+              .fromTo(
+                ".scene-origin-meta",
+                {
+                  y: "80vh",
+                  opacity: 0,
+                },
+                {
+                  y: 0,
+                  opacity: 1,
+                  stagger: 0.05,
+                  ease: "power2.out",
+                },
+                0.45
+              )
+              .to(
+                ".scene-origin-meta",
+                {
+                  x: "-70vh",
+                  opacity: 0.3,
+                  stagger: 0.05,
+                  ease: "power2.out",
+                },
+                1.76
+              )
+              .to(
+                ".scene-origin-title",
+                {
+                  scale: 1,
+                  x: 0,
+                  y: "40vh",
+                  opacity: 0.3,
+                  ease: "none",
+                },
+                1.26
+              )
+              .to(
+                ".scene-origin-pouch",
+                {
+                  x: "7vh",
+                  y: "-17vh",
+                  rotate: 8,
+                  scale: 1.82,
+                  opacity: 0.3,
+                  ease: "none",
+                },
+                1.46
+              );
           }
 
           if (id === "process") {
             timeline
-              .fromTo(".scene-process-track", { scaleX: 0 }, { scaleX: 1, transformOrigin: "left center", ease: "none" }, 0)
-              .fromTo(".scene-process-dot", { x: 0 }, { x: "calc(100% - 18px)", ease: "none" }, 0)
-              .fromTo(".scene-process-active", { x: 0 }, { x: 0, ease: "none" }, 0)
-              .to(".scene-process-active", { x: "80%", ease: "none" }, 0.65)
-              .fromTo(".scene-process-caption", { y: 80, opacity: 0 }, { y: 0, opacity: 1, ease: "none" }, 0.28)
-              .to(".scene-process-orbit", { rotate: 210, scale: 1.16, ease: "none" }, 0);
+              .fromTo(
+                ".scene-process-track",
+                { scaleX: 0 },
+                {
+                  scaleX: 1,
+                  transformOrigin: "left center",
+                  ease: "none",
+                },
+                0
+              )
+              .fromTo(
+                ".scene-process-dot",
+                { x: 0 },
+                {
+                  x: "calc(100% - 18px)",
+                  ease: "none",
+                },
+                0
+              )
+              .fromTo(
+                ".scene-process-active",
+                { x: 0 },
+                { x: 0, ease: "none" },
+                0
+              )
+              .to(
+                ".scene-process-active",
+                {
+                  x: "80%",
+                  ease: "none",
+                },
+                0.65
+              )
+              .fromTo(
+                ".scene-process-caption",
+                {
+                  y: "8vh",
+                  opacity: 0,
+                },
+                {
+                  y: 0,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.28
+              )
+              .to(
+                ".scene-process-orbit",
+                {
+                  rotate: 210,
+                  scale: 1.16,
+                  ease: "none",
+                },
+                0
+              );
           }
 
           if (id === "packaging") {
             timeline
-              .fromTo(".scene-package-pouch", { x: -480, y: 80, rotate: -18, scale: 0.62 }, { x: 0, y: 0, rotate: 0, scale: 1.35, ease: "none" }, 0)
-              .fromTo(".scene-package-beans", { x: 280, y: 110, rotate: -30, opacity: 0 }, { x: 0, y: 0, rotate: 0, opacity: 1, ease: "none" }, 0.2)
-              .fromTo(".scene-package-type", { x: 180, opacity: 0.1 }, { x: -70, opacity: 1, ease: "none" }, 0.18)
-              .to(".scene-package-pouch", { x: 340, y: -20, rotate: 7, scale: 1.12, ease: "none" }, 0.62)
-              .to(".scene-package-type", { x: -230, opacity: 0.15, ease: "none" }, 0.72);
+              .fromTo(
+                ".scene-package-pouch",
+                {
+                  x: "-48vh",
+                  y: "8vh",
+                  rotate: -18,
+                  scale: 0.62,
+                },
+                {
+                  x: 0,
+                  y: 0,
+                  rotate: 0,
+                  scale: 1.35,
+                  ease: "none",
+                },
+                0
+              )
+              .fromTo(
+                ".scene-package-beans",
+                {
+                  x: "28vh",
+                  y: "11vh",
+                  rotate: -100,
+                  opacity: 0,
+                },
+                {
+                  x: 0,
+                  y: 0,
+                  rotate: 0,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.2
+              )
+              .fromTo(
+                ".scene-package-type",
+                {
+                  x: "18vh",
+                  opacity: 0.1,
+                },
+                {
+                  x: "-7vh",
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.18
+              )
+              .to(
+                ".scene-package-pouch",
+                {
+                  x: "-34vh",
+                  scale: 1.12,
+                  opacity: 0.4,
+                  ease: "none",
+                },
+                0.62
+              )
+              .to(
+                ".scene-package-type",
+                {
+                  x: "-23vh",
+                  opacity: 0.15,
+                  ease: "none",
+                },
+                0.72
+              )
+              .to(
+                ".scene-package-beans",
+                {
+                  x: "-22vh",
+                  y: 0,
+                  rotate: 100,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.72
+              );
           }
 
           if (id === "statement") {
             timeline
-              .fromTo(".scene-statement-line", { x: 180, opacity: 0 }, { x: 0, opacity: 1, stagger: 0.1, ease: "power2.out" }, 0)
-              .to(".scene-statement-line", { x: (i) => (i === 1 ? -100 : i === 2 ? 90 : -40), opacity: 0.35, stagger: 0.04, ease: "none" }, 0.64)
-              .fromTo(".scene-statement-note", { y: 100, opacity: 0 }, { y: 0, opacity: 1, ease: "none" }, 0.52);
+              .fromTo(
+                ".scene-statement-line",
+                {
+                  x: "18vh",
+                  opacity: 0,
+                },
+                {
+                  x: 0,
+                  opacity: 1,
+                  stagger: 0.1,
+                  ease: "power2.out",
+                },
+                0
+              )
+              .to(
+                ".scene-statement-line",
+                {
+                  x: (i) =>
+                    i === 1
+                      ? "-10vh"
+                      : i === 2
+                        ? "9vh"
+                        : "-4vh",
+                  opacity: 0.35,
+                  stagger: 0.04,
+                  ease: "none",
+                },
+                1.2
+              )
+              .fromTo(
+                ".scene-statement-note",
+                {
+                  y: "10vh",
+                  opacity: 0,
+                },
+                {
+                  y: 0,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.52
+              );
           }
 
           if (id === "final") {
             timeline
-              .fromTo(".scene-final-pouch", { y: 100, rotate: -4, scale: 0.82, opacity: 0 }, { y: 0, rotate: 0, scale: 1, opacity: 1, ease: "power2.out" }, 0)
-              .fromTo(".scene-final-copy", { x: -100, opacity: 0 }, { x: 0, opacity: 1, ease: "none" }, 0.25)
-              .to(".scene-final-pouch", { y: -18, rotate: 2, scale: 1.05, ease: "none" }, 0.68)
-              .fromTo(".scene-final-cta", { y: 70, opacity: 0 }, { y: 0, opacity: 1, ease: "none" }, 0.62);
-        }
+              .fromTo(
+                ".scene-final-pouch",
+                {
+                  y: "10vh",
+                  rotate: -4,
+                  scale: 0.82,
+                  opacity: 0,
+                },
+                {
+                  y: 0,
+                  rotate: 0,
+                  scale: 1,
+                  opacity: 1,
+                  ease: "power2.out",
+                },
+                0
+              )
+              .fromTo(
+                ".scene-final-copy",
+                {
+                  x: "-10vh",
+                  opacity: 0,
+                },
+                {
+                  x: 0,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.25
+              )
+              .to(
+                ".scene-final-pouch",
+                {
+                  y: "-1.8vh",
+                  rotate: 2,
+                  scale: 1.05,
+                  ease: "none",
+                },
+                0.68
+              )
+              .fromTo(
+                ".scene-final-cta",
+                {
+                  y: "7vh",
+                  opacity: 0,
+                },
+                {
+                  y: 0,
+                  opacity: 1,
+                  ease: "none",
+                },
+                0.62
+              );
+          }
       });
       });
 
@@ -212,7 +726,7 @@ export function CoffeeStory() {
           <p className="cs-hero-intro">A small-batch coffee for people who notice the details. Roasted with curiosity in mind.</p>
           <a className="cs-arrow" href="#coffee" aria-label="Move to the coffee scene">↓</a>
         </div>
-        <div className="scene-product-art cs-scene-element"><Pouch className="scene-product-pouch" /><span className="cs-stamp">WEST JAVA · 2024 HARVEST</span><span className="scene-product-word">GunungHalu<br />Coffee</span></div>
+        <div className="scene-product-art cs-scene-element"><Pouch className="scene-product-pouch" /><span className="cs-stamp">WEST JAVA · 2024 HARVEST</span><span className="scene-product-word">Coffee<br />GunungHalu</span></div>
         <div className="scene-product-next cs-scene-element">01 / THE PRODUCT BECOMES A STORY</div>
       </Scene>
 
